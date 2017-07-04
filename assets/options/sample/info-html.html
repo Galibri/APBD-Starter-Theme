@@ -1,0 +1,67 @@
+    <style type="text/css">
+/*
+    Parallax Experiment
+    Date: 2nd April 2009
+    Author: Paul Hayes
+    */
+    * {
+    	margin: 0; padding: 0;
+    }
+
+    #infoSample {
+    position: relative;
+    border: 2px solid #111;
+    overflow: hidden;
+    margin: 0; padding: 0;
+    }
+
+    #infoSample #background {
+    padding: 30px;
+    background: url(data:image/png; 5% 5%), 90% 110%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    -webkit-transition: left 300s linear;
+    -moz-transition: left 300s linear;
+    -o-transition: left 300s linear;
+    -ms-transition: left 300s linear;
+    transition: left 300s linear;
+    }
+
+    #infoSample #experiment:target #background {
+    left: -5000px;
+    }
+
+    #infoSample #experiment:hover #background {
+    left: -9999px;
+    }
+
+    #infoSample #content {
+    margin: 80px 50px;
+    background-color: #aaa;
+    opacity: 0.95;
+    color: #555;
+    padding: 3em;
+    border: 2px solid #666;
+    }
+
+    #infoSample #content h2 {
+    margin: 1em 0;
+    font-weight: bold;
+    font-size:  26px;
+    }
+    </style>
+    <div id="infoSample">
+	    <div class="wrapper">
+	        <div id="experiment">
+	            <div id="background"></div>
+
+	            <div id="content">
+	                <h2>Raw Field</h2>
+	                <p>You can embed any type of content in an raw field. Then you can have all kinds of fun with Redux!</p>
+	            </div>
+	        </div>
+	    </div>
+    </div>
